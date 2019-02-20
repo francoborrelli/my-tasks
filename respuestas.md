@@ -18,7 +18,7 @@ Devuelve el valor 40.
 
 ## Con qué valor crees que queda x?
 
-x = {a: 1, b: 2, c: 20, d: undefined}
+x quedaria con el valor {a: 1, b: 2, c: 20, d: undefined}
 
 | Paso                            | Explicacion                                                                                                                                                                                                                                   |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -30,28 +30,28 @@ x = {a: 1, b: 2, c: 20, d: undefined}
 
 Async devuelve de forma implicita una Promesa. El await va a demorar la ejecucion de la funcion hasta el momento en que la promesa resuelva.
 
-const func = new Promise (resolve => {setTimeout((a) => a + 2 , 2000)})
+``const func = new Promise (resolve => {setTimeout((a) => a + 2 , 2000)})``
 
-const asyncfunct = async (a) => { return await func(a) }
+``const asyncfunct = async (a) => { return await func(a) }``
 
-asyncfunct (1) // asyncfunct no terminara hasta que pasen 2 segundos.
+``asyncfunct (1)`` // asyncfunct no terminara hasta que pasen 2 segundos.
 
 Se podria implementar mediante el uso de Promises.
 
 ## Que diferencias encontrás entre f, g y h?
 
-const f = (x) => x + 10
+``const f = (x) => x + 10``
 
 Uso de una arrow function
 
-function g(x) {
-return x + 10 }
+``function g(x) {
+return x + 10 }``
 
 Uso de una funcion nombrada
 
-const h = function (x) {
+``const h = function (x) {
 return x + 10
-}
+}``
 
 Uso de una funcion anonima asignada a una variable
 
@@ -90,8 +90,8 @@ La opcion C. Se presenta como la alternativa mas "friendly". Se podria optar por
 
 Con las opciones a y b se puede acceder de forma sencilla a los parametros definidos
 
-#React
-##Cuál es la diferencia entre Class Components y Stateless Components
+# React
+## Cuál es la diferencia entre Class Components y Stateless Components
 
 Se denominan class components a aquellas clases que extienden de la clase Component provista por React.
 Este tipo de componentes son stateful. Pueden mantenter un estado interno, el cual al ser modificado puede disparar una modificacion automatica en el Dom.
