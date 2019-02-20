@@ -5,9 +5,7 @@ import { addToDo } from "../../store/actions";
 import { validateText } from "../../utils/validator";
 
 import Card from "../card/card";
-import { Input, Form, Button } from "antd";
-
-const FormItem = Form.Item;
+import { Input, Button } from "antd";
 
 class New extends Component {
   state = {

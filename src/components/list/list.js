@@ -1,15 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 
 import ToDo from "../toDo/toDo";
+import NoResult from "./noResult";
+
 import "./list.css";
 
 const List = ({ todos }) => {
   return (
     <div className="todo-container">
-      {todos.map((todo, i) => (
-        <ToDo key={`todo${i}`} todo={todo} />
-      ))}
+      {todos.length ? (
+        todos.map((todo, i) => <ToDo key={`todo${i}`} todo={todo} />)
+      ) : (
+        <NoResult />
+      )}
     </div>
   );
 };
