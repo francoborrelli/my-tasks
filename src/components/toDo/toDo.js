@@ -3,9 +3,10 @@ import { bindActionCreators } from "redux";
 import { editToDo, removeToDo } from "../../store/actions";
 import { connect } from "react-redux";
 
-import { Icon, Input, Form } from "antd";
+import { Icon, Form } from "antd";
 import { validateText } from "../../utils/validator";
 import Card from "../card/card";
+import Input from "../input/input";
 
 const Item = Form.Item;
 
