@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import ToDo from "../toDo/toDo";
+import ToDo from "../toDo/ToDo";
 import NoResult from "./noResult";
 
 import "./list.css";

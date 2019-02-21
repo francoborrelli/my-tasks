@@ -12,7 +12,16 @@ const handlers = {
     return { todos };
   },
 
-  [mutations.EDIT_TODO]: (state, removed) => {},
+  [mutations.EDIT_TODO]: (state, element) => {
+    const index = state.todos.findIndex(t => element.old === t);
+    const todos = [
+      ...state.todos.slice(0, index),
+      { ...element.old, text: element.new },
+      ...state.todos.slice(index + 1)
+    ];
+    setStorage(todos);
+    return { todos };
+  },
 
   [mutations.REMOVE_TODO]: (state, removed) => {
     const todos = state.todos.filter(todo => todo !== removed);
