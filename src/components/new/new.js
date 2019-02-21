@@ -13,6 +13,7 @@ const New = ({ addToDo }) => {
   const onPress = () => {
     if (validateText(text)) {
       addToDo(text);
+      setText("");
     }
   };
 
