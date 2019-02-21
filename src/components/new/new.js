@@ -5,25 +5,25 @@ import { addToDo } from "../../store/actions";
 import { validateText } from "../../utils/validator";
 
 import Card from "../card/card";
-import { Input, Button } from "antd";
+import Input from "../input/input";
+import { Button } from "antd";
 
 const New = ({ addToDo }) => {
   const [text, setText] = useState("");
 
+  const onPress = () => {
+    if (validateText(text)) {
+      addToDo(text);
+    }
+  };
+
   return (
-    <Card>
+    <Card title="To Do List">
       <Input
-        placeholder="Ingrese una descripcion breve"
         value={text}
+        onPressEnter={onPress}
         onChange={e => setText(e.target.value)}
       />
-      <Button
-        style={{ marginTop: 10 }}
-        disabled={!validateText(text)}
-        onClick={() => addToDo(text)}
-      >
-        Guardar
-      </Button>
     </Card>
   );
 };
