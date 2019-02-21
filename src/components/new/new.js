@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { addToDo } from "../../store/actions";
@@ -7,29 +7,22 @@ import { validateText } from "../../utils/validator";
 import Card from "../card/card";
 import { Input, Button } from "antd";
 
-class New extends Component {
-  state = {
-    text: ""
-  };
+const New = ({ addToDo }) => {
+  const [text, setText] = useState("");
 
-  render() {
-    return (
-      <Card>
-        <Input
-          value={this.state.text}
-          onChange={e => this.setState({ text: e.target.value })}
-        />
-        <Button
-          style={{ marginTop: 10 }}
-          disabled={!validateText(this.state.text)}
-          onClick={() => this.props.addToDo(this.state.text)}
-        >
-          Guardar
-        </Button>
-      </Card>
-    );
-  }
-}
+  return (
+    <Card>
+      <Input value={text} onChange={e => setText(e.target.value)} />
+      <Button
+        style={{ marginTop: 10 }}
+        disabled={!validateText(text)}
+        onClick={() => addToDo(text)}
+      >
+        Guardar
+      </Button>
+    </Card>
+  );
+};
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({ addToDo }, dispatch);
