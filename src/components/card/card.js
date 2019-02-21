@@ -2,8 +2,6 @@ import React from "react";
 
 import { Card } from "antd";
 
-const style = { width: 500, margin: "10px auto" };
+import "./card.css";
 
-export default props => (
-  <Card {...props} style={{ ...style, ...props.style }} />
-);
+export default props => <Card {...props} />;
