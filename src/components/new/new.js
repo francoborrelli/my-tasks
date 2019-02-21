@@ -6,7 +6,6 @@ import { validateText } from "../../utils/validator";
 
 import Card from "../card/card";
 import Input from "../input/input";
-import { Button } from "antd";
 
 const New = ({ addToDo }) => {
   const [text, setText] = useState("");
