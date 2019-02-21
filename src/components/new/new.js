@@ -12,7 +12,11 @@ const New = ({ addToDo }) => {
 
   return (
     <Card>
-      <Input value={text} onChange={e => setText(e.target.value)} />
+      <Input
+        placeholder="Ingrese una descripcion breve"
+        value={text}
+        onChange={e => setText(e.target.value)}
+      />
       <Button
         style={{ marginTop: 10 }}
         disabled={!validateText(text)}
