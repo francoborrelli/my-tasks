@@ -27,6 +27,14 @@ const handlers = {
     const todos = state.todos.filter(todo => todo !== removed);
     setStorage(todos);
     return { todos };
+  },
+
+  [mutations.REORDER_TODOS]: (state, movement) => {
+    const todos = Array.from(state.todos);
+    const [removed] = todos.splice(movement.source, 1);
+    todos.splice(movement.destination, 0, removed);
+    setStorage(todos);
+    return { todos };
   }
 };
 
