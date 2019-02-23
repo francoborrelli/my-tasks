@@ -33,7 +33,7 @@ const EditCard = ({ toddleEdit, editToDo, todo }) => {
     <Card actions={editActions}>
       <Item
         style={{ marginBottom: 0 }}
-        validateStatus={e => (validateText(text) ? "" : "error")}
+        validateStatus={validateText(text) ? "" : "error"}
       >
         <Input
           defaultValue={text}

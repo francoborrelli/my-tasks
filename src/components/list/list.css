@@ -3,6 +3,7 @@
   margin: 10px auto;
 }
 
-[data-react-beautiful-dnd-drag-handle] {
+[data-react-beautiful-dnd-drag-handle="0"],
+[data-react-beautiful-dnd-drag-handle="1"] {
   margin-top: 10px;
 }
