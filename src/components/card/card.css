@@ -1,6 +1,6 @@
 .ant-card {
   width: 500px;
-  margin: 10px auto;
+  margin: 0px auto;
 }
 
 @media (max-width: 550px) {

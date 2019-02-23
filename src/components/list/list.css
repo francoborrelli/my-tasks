@@ -2,3 +2,7 @@
   text-align: center;
   margin: 10px auto;
 }
+
+[data-react-beautiful-dnd-drag-handle="0"] {
+  margin-top: 10px;
+}
