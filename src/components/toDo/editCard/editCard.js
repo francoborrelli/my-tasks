@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { bindActionCreators } from "redux";
-import { editToDo, removeToDo } from "../../../store/actions";
+import { editToDo } from "../../../store/actions";
 import { connect } from "react-redux";
 
 import { Icon, Form } from "antd";
