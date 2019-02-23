@@ -6,7 +6,8 @@
   border-bottom: 1px solid #8080803b;
 }
 
-.input-text:hover {
+.input-text:hover,
+.input-text:focus {
   border-bottom: 1px solid #8080808c;
 }
 

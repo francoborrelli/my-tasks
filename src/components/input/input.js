@@ -7,7 +7,7 @@ import "../input/input.css";
 export default props => (
   <Input
     className="input-text"
-    placeholder="Agrege una descripción breve"
+    placeholder="Ingrese una breve descripción"
     {...props}
   />
 );
