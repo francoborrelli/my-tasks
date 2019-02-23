@@ -1,0 +1,11 @@
+.ant-card-actions > li {
+  margin: 8px 0px;
+}
+
+.ant-card-actions > li > span:hover {
+  color: gray;
+}
+
+.anticon {
+  transition: all 400ms;
+}
