@@ -1,4 +1,4 @@
-import { Row, Space, Typography } from 'antd';
+import { Typography } from 'antd';
 import { ThemeSwitch } from '../themeSwitch';
 
 export const NewSection = () => {

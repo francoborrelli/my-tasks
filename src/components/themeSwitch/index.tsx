@@ -1,4 +1,4 @@
-import { Button, Dropdown } from 'antd';
+import { Button } from 'antd';
 import { LaptopOutlined, MoonFilled, SunFilled } from '@ant-design/icons';
 
 // Redux
